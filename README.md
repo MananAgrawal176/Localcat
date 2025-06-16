@@ -29,7 +29,7 @@ Q1
     a = np.array([num for num in b if num <= np.mean(b)])
     print(a)
 
-#part 4
+# Part 4
 
      
 

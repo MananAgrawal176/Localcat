@@ -2,32 +2,6 @@
 For uploading assignment for LS
 
 Q1
-    import numpy as np
-
-    def numpy_boundary_traversal(matrix):
-  
-
-    rows, cols = matrix.shape
-    result = []
-
-   
-    if rows == 1:
-        result.extend(matrix[0])
-    
-    elif cols == 1:
-        result.extend(matrix[:, 0])
-    else:
-       
-        result.extend(matrix[0, :])
-
-        result.extend(matrix[1:rows-1, -1])
-
-        result.extend(matrix[-1, ::-1])
-
-  
-        result.extend(matrix[rows-2:0:-1, 0])
-
-    return result
 
     import numpy as np
 
@@ -57,4 +31,31 @@ Q1
 
 #part 4
 
+     
+
+    def numpy_boundary_traversal(matrix):
+  
+
+    rows, cols = matrix.shape
+    result = []
+
+   
+    if rows == 1:
+        result.extend(matrix[0])
+    
+    elif cols == 1:
+        result.extend(matrix[:, 0])
+    else:
+       
+        result.extend(matrix[0, :])
+
+        result.extend(matrix[1:rows-1, -1])
+
+        result.extend(matrix[-1, ::-1])
+
+  
+        result.extend(matrix[rows-2:0:-1, 0])
+
+    return result
+    
     print(numpy_boundary_traversal(random))

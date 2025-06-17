@@ -16,13 +16,19 @@ df['Grade']= ['A' if num>= 90 else
              for num in df['Score']]
 print(df)
 
+print("="*100)
+
 # Part 2
 df_new = df.sort_values('Score', ascending= False)            
 print (df_new.to_string(index= False))
 
+print("="*100)
+
 # Part 3
 grouped= df.groupby('Subject')['Score'].mean().round(2)
 print (grouped)
+
+print("="*100)
 
 # Part 4
 def pandas_filter_pass(df):

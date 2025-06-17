@@ -1,40 +1,42 @@
 import numpy as np
 
-    random = np.array([[1, 2, 3, 4],
+random = np.array([[1, 2, 3, 4],
                    [5, 6, 7, 8],
                    [9, 10, 11, 12],
                    [13, 14, 15, 16],
                    [17, 18, 19, 20]])
 # Part 1
-    for i in range(random.shape[0]):
-         print(random[i, 3 - i])
+for i in range(random.shape[0]):
+    print(random[i, 3 - i])
+
+print("="*100)
 
 # Part 2
-    for i in range(random.shape[0]):
+for i in range(random.shape[0]):
     print(np.max(random[i]))
 
+print("="*100)
+
 # Part 3
-    b = random.flatten()
-    a = []
-    for i in range(random.size):
+b = random.flatten()
+
+a = []
+for i in range(random.size):
     if b[i] <= np.mean(b):
         a.append(b[i])
-    print(a)
+print(a)
 
-    a = np.array([num for num in b if num <= np.mean(b)])
-    print(a)
+ar = np.array([num for num in b if num <= np.mean(b)])
+print(ar)
+
+print("="*100)
 
 # Part 4
 
-     
-
-    def numpy_boundary_traversal(matrix):
-  
-
+def numpy_boundary_traversal(matrix):  
     rows, cols = matrix.shape
     result = []
 
-   
     if rows == 1:
         result.extend(matrix[0])
     
@@ -53,4 +55,4 @@ import numpy as np
 
     return result
     
-    print(numpy_boundary_traversal(random))
+print(numpy_boundary_traversal(random))

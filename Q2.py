@@ -8,16 +8,22 @@ arr = np.array([0.03871,9.93639,9.6247,8.2241,7.3135,6.3351,4.5135,5.976,3.25671
 rounded_arr = np.round(arr, 2)
 print(rounded_arr)
 
+print("="*100)
+
 # Part 2: 
 
 print( np.min(rounded_arr))
 print( np.max(rounded_arr))
 print( np.median(rounded_arr).round(2))
 
+print("="*100)
+
 # Part 3
 modified_arr = np.array([x**2 if x < 5 else x for x in rounded_arr])
 
 print(modified_arr.round(2))
+
+print("="*100)
 
 # Part 4
 def numpy_alternate_sort(array):
